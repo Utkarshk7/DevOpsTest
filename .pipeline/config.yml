@@ -23,7 +23,8 @@ steps:
     versioningType: cloud_noTag
 
   uiVeri5ExecuteTests:
-    
+    runOptions: ["--seleniumAddress=http://selenium:4444/wd/hub", "./app/admin/webapp/test/uiveri5/conf.js"]
+
 
 ### Stage-specific configuration
 stages:
