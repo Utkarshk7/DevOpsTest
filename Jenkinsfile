@@ -7,6 +7,11 @@
  * More information on getting started with Continuous Delivery can be found here: https://sap.github.io/jenkins-library/
  */
 
-@Library('piper-lib-os') _
 
-piperPipeline script: this
+@Library('piper-lib-os') _
+node() {
+    stage('prepare') {
+        checkout scm
+        setupCommonPipelineEnvironment script:this
+    }
+}
